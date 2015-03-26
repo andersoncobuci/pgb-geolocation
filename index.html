@@ -16,8 +16,10 @@
     //
     function onDeviceReady() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
-        var rTime = { timeout: 3000};
-        watchID =  navigator.geolocation.getCurrentPosition(onSuccessW, onErrorW, rTime);
+        
+        setInterval(function(){
+            navigator.geolocation.getCurrentPosition(onSuccessW, onErrorW);
+        }, 10000)
     }
 
     // onSuccess Geolocation
