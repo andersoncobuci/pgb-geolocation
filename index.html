@@ -16,7 +16,7 @@
     //
     function onDeviceReady() {
         navigator.geolocation.getCurrentPosition(onSuccess, onError);
-        var rTime = { timeou: 3000};
+        var rTime = { timeout: 3000};
         watchID =  navigator.geolocation.getCurrentPosition(onSuccessW, onErrorW, rTime);
     }
 
